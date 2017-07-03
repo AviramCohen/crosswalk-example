@@ -18,7 +18,7 @@ export default class Crosswalk extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <CrosswalkWebview />
+        <CrosswalkWebview style={styles.webview} source={{uri: 'https://www.google.com'}} />
       </View>
     );
   }
@@ -41,6 +41,10 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  webview: {
+    width: '100%',
+    height: '100%'
+  }
 });
 
 AppRegistry.registerComponent('Crosswalk', () => Crosswalk);
